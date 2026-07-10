@@ -29,7 +29,7 @@
   --font-body:'IBM Plex Sans', sans-serif;
   --font-mono:'IBM Plex Mono', monospace;
 }
-
+ 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -49,9 +49,9 @@ body{
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
-
+ 
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-
+ 
 /* ---------- ШАПКА ---------- */
 header{
   position:sticky;top:0;z-index:50;
@@ -65,7 +65,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav-links{display:flex;gap:28px;list-style:none}
 .nav-links a{color:var(--ink-soft);font-size:15px;font-weight:500}
 .nav-links a:hover{color:var(--ink);text-decoration:none}
-
+ 
 /* ---------- ГЕРОЙ ---------- */
 .hero{padding:96px 0 72px;position:relative;overflow:hidden}
 .hero .status{
@@ -101,13 +101,13 @@ h1 .accent{color:var(--accent)}
 .btn:hover{text-decoration:none;transform:translateY(-2px)}
 .btn-primary{background:var(--accent);color:#fff}
 .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
-
+ 
 /* декоративная «сеть» позади героя */
 .net{position:absolute;right:-60px;top:40px;width:420px;opacity:.55;pointer-events:none}
 .net line{stroke:var(--line);stroke-width:1.5}
 .net circle{fill:var(--surface);stroke:var(--accent);stroke-width:2}
 .net .packet{fill:var(--accent);stroke:none}
-
+ 
 /* ---------- СЕКЦИИ ---------- */
 section{padding:72px 0;scroll-margin-top:72px}
 .eyebrow{
@@ -118,7 +118,7 @@ h2{
   font-family:var(--font-display);font-weight:500;
   font-size:clamp(24px,3.5vw,34px);margin-bottom:28px;
 }
-
+ 
 /* обо мне */
 .about-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:start}
 .about-grid p + p{margin-top:14px}
@@ -130,7 +130,7 @@ h2{
 .facts dt{color:var(--ink-soft);margin-top:14px}
 .facts dt:first-child{margin-top:0}
 .facts dd{font-weight:500}
-
+ 
 /* навыки */
 .skills{display:flex;flex-wrap:wrap;gap:10px}
 .skills li{
@@ -140,7 +140,7 @@ h2{
   padding:8px 16px;border-radius:999px;
 }
 .skills li:hover{border-color:var(--accent);background:var(--accent-soft)}
-
+ 
 /* проекты */
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
 .card{
@@ -156,7 +156,7 @@ h2{
 }
 .card p{color:var(--ink-soft);font-size:15.5px;flex-grow:1}
 .card a{font-weight:600;font-size:15px}
-
+ 
 /* контакты */
 .contact-box{
   background:var(--ink);color:#F2F5F7;
@@ -168,18 +168,18 @@ h2{
 .contact-box .btn-primary{background:var(--accent)}
 .contact-links{display:flex;gap:20px;margin-top:18px;flex-wrap:wrap}
 .contact-links a{color:#DDE5EA;font-family:var(--font-mono);font-size:14px}
-
+ 
 footer{padding:36px 0;color:var(--ink-soft);font-size:14px;font-family:var(--font-mono);text-align:center}
-
+ 
 /* плавное появление секций */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
-
+ 
 /* появление со сдвигом слева/справа (для «Обо мне») */
 .slide-l{opacity:0;transform:translateX(-32px);transition:opacity .7s ease .15s, transform .7s ease .15s}
 .slide-r{opacity:0;transform:translateX(32px);transition:opacity .7s ease .25s, transform .7s ease .25s}
 .visible .slide-l,.visible .slide-r{opacity:1;transform:none}
-
+ 
 /* каскадное появление плашек навыков и карточек:
    каждый следующий элемент выезжает чуть позже предыдущего */
 .stagger > *{opacity:0;transform:translateY(18px) scale(.97);transition:opacity .5s ease, transform .5s ease}
@@ -192,7 +192,7 @@ footer{padding:36px 0;color:var(--ink-soft);font-size:14px;font-family:var(--fon
 .visible .stagger > *:nth-child(6){transition-delay:.40s}
 .visible .stagger > *:nth-child(7){transition-delay:.47s}
 .visible .stagger > *:nth-child(8){transition-delay:.54s}
-
+ 
 /* подчёркивание заголовков секций «прорисовывается» при появлении */
 h2{position:relative;display:inline-block}
 h2::after{
@@ -201,7 +201,7 @@ h2::after{
   transition:width .8s cubic-bezier(.22,1,.36,1) .3s;
 }
 .visible h2::after{width:52px}
-
+ 
 /* появление героя при загрузке страницы */
 .hero .status, .hero h1, .hero .lead, .hero .actions{
   opacity:0;transform:translateY(20px);
@@ -211,13 +211,13 @@ h2::after{
 .hero .lead{animation-delay:.24s}
 .hero .actions{animation-delay:.36s}
 @keyframes heroIn{to{opacity:1;transform:none}}
-
+ 
 /* индикатор прочитанного — тонкая полоса под шапкой */
 .progress{
   position:fixed;top:0;left:0;z-index:60;
   height:3px;width:0;background:var(--accent);
 }
-
+ 
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;transition:none!important}
   .reveal,.slide-l,.slide-r,.stagger > *,
@@ -237,10 +237,10 @@ h2::after{
 </style>
 </head>
 <body>
-
+ 
 <canvas id="bg" aria-hidden="true"></canvas>
 <div class="progress" aria-hidden="true"></div>
-
+ 
 <header>
   <div class="wrap">
     <nav>
@@ -254,7 +254,7 @@ h2::after{
     </nav>
   </div>
 </header>
-
+ 
 <main>
   <!-- ГЕРОЙ -->
   <section class="hero">
@@ -268,7 +268,7 @@ h2::after{
       </div>
     </div>
   </section>
-
+ 
   <!-- ОБО МНЕ -->
   <section id="about" class="reveal">
     <div class="wrap">
@@ -277,18 +277,17 @@ h2::after{
       <div class="about-grid">
         <div class="slide-l">
           <p>Меня зовут Илья Шитов, я инженер и программист из Челябинска. В IT уже около трёх лет: за это время успел поработать с сетевой инфраструктурой, настройкой VPN и маршрутизации, администрированием Windows и macOS.</p>
-          <p>[Здесь можно добавить второй абзац: как пришли в профессию, что интересно сейчас, куда хотите развиваться.]</p>
         </div>
         <dl class="facts slide-r">
           <dt>Локация</dt><dd>Челябинск, Россия</dd>
-          <dt>Опыт</dt><dd>2–3 года в IT</dd>
+          <dt>Опыт</dt><dd>3 года в IT</dd>
           <dt>Языки</dt><dd>русский</dd>
           <dt>Формат</dt><dd>удалённо / офис</dd>
         </dl>
       </div>
     </div>
   </section>
-
+ 
   <!-- НАВЫКИ -->
   <section id="skills" class="reveal">
     <div class="wrap">
@@ -296,17 +295,16 @@ h2::after{
       <h2>Навыки</h2>
       <ul class="skills stagger">
         <li>Сети и маршрутизация</li>
-        <li>VPN (AmneziaVPN, OpenVPN)</li>
+        <li>VPN (OpenVPN)</li>
         <li>Администрирование Windows</li>
         <li>Администрирование macOS</li>
         <li>Командная строка / Bash</li>
         <li>Диагностика сетевых проблем</li>
         <li>Установка и переустановка ОС</li>
-        <li>[Язык программирования]</li>
       </ul>
     </div>
   </section>
-
+ 
   <!-- ПРОЕКТЫ -->
   <section id="projects" class="reveal">
     <div class="wrap">
@@ -326,7 +324,7 @@ h2::after{
       </div>
     </div>
   </section>
-
+ 
   <!-- КОНТАКТЫ -->
   <section id="contact" class="reveal">
     <div class="wrap">
@@ -344,18 +342,18 @@ h2::after{
     </div>
   </section>
 </main>
-
+ 
 <footer>
   <div class="wrap">© 2026 Илья Шитов</div>
 </footer>
-
+ 
 <script>
 // Плавное появление секций при прокрутке
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
+ 
 // Индикатор прочитанного: полоса заполняется по мере прокрутки
 const progressBar = document.querySelector('.progress');
 function updateProgress() {
@@ -364,7 +362,7 @@ function updateProgress() {
 }
 window.addEventListener('scroll', updateProgress, { passive: true });
 updateProgress();
-
+ 
 // При клике по меню сразу показываем целевую секцию,
 // чтобы не ждать анимацию появления после перехода
 document.querySelectorAll('.nav-links a, .hero .actions a').forEach(link => {
@@ -373,23 +371,23 @@ document.querySelectorAll('.nav-links a, .hero .actions a').forEach(link => {
     if (target) target.classList.add('visible');
   });
 });
-
+ 
 // ---------- Анимированный фон: живая сеть из узлов ----------
 (function () {
   const canvas = document.getElementById('bg');
   const ctx = canvas.getContext('2d');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+ 
   let W, H, nodes = [];
   const mouse = { x: null, y: null };
-
+ 
   function resize() {
     W = canvas.width = window.innerWidth;
     H = canvas.height = window.innerHeight;
   }
   resize();
   window.addEventListener('resize', () => { resize(); init(); });
-
+ 
   function init() {
     // плотность узлов зависит от площади экрана
     const count = Math.min(90, Math.floor(W * H / 16000));
@@ -402,15 +400,15 @@ document.querySelectorAll('.nav-links a, .hero .actions a').forEach(link => {
     }));
   }
   init();
-
+ 
   window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
   window.addEventListener('mouseleave', () => { mouse.x = mouse.y = null; });
-
+ 
   const LINK_DIST = 130;
-
+ 
   function draw() {
     ctx.clearRect(0, 0, W, H);
-
+ 
     // линии между близкими узлами
     for (let i = 0; i < nodes.length; i++) {
       for (let j = i + 1; j < nodes.length; j++) {
@@ -427,7 +425,7 @@ document.querySelectorAll('.nav-links a, .hero .actions a').forEach(link => {
         }
       }
     }
-
+ 
     // узлы + линия к курсору
     for (const n of nodes) {
       if (mouse.x !== null) {
@@ -446,7 +444,7 @@ document.querySelectorAll('.nav-links a, .hero .actions a').forEach(link => {
       ctx.fill();
     }
   }
-
+ 
   function step() {
     for (const n of nodes) {
       n.x += n.vx;
@@ -457,7 +455,7 @@ document.querySelectorAll('.nav-links a, .hero .actions a').forEach(link => {
     draw();
     requestAnimationFrame(step);
   }
-
+ 
   if (reduceMotion) {
     // без анимации: рисуем статичную сеть один раз
     draw();
@@ -466,6 +464,6 @@ document.querySelectorAll('.nav-links a, .hero .actions a').forEach(link => {
   }
 })();
 </script>
-
+ 
 </body>
 </html>
